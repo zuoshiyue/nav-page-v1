@@ -76,7 +76,7 @@ const scrollbarRef = ref<InstanceType<typeof ElScrollbar>>()
 
 const inputSearch = ref('')
 
-const selectSearch = ref('dev')
+const selectSearch = ref('必应')
 
 const needSpaceStyle = ref({
     height: '0px',
@@ -124,6 +124,7 @@ const buttonSearch = () => {
 
         default:
             // 如果用户未选择任何搜索引擎或选择了未知的搜索引擎，不做任何操作
+            window.open(`https://cn.bing.com/search?q=${inputSearch.value}`)
             break
     }
 }
